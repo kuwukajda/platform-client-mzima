@@ -113,6 +113,8 @@ export class GeneralComponent implements OnInit {
         .pipe(
           mergeMap((newImage: any) => {
             this.siteConfig.image_header = newImage.result.original_file_url;
+            console.log(newImage.result.original_file_url);
+            console.log(this.updateSettings());
             return this.updateSettings();
           }),
         )
@@ -125,6 +127,7 @@ export class GeneralComponent implements OnInit {
             this.loader.hide();
             this.submitted = false;
             this.notificationService.showError(error.message);
+            alert('error');
           },
         });
     } else {
@@ -132,6 +135,25 @@ export class GeneralComponent implements OnInit {
         complete: () => {
           this.submitted = false;
           this.loader.hide();
+          this.notificationService.showSnackbar(
+            {
+              icon: {
+                color: 'success',
+                name: 'thumb-up',
+              },
+              title: 'Deployment settings updated successfully',
+              buttons: [
+                {
+                  color: 'primary',
+                  text: 'notify.export.confirmation',
+                },
+              ],
+            },
+            {
+              duration: 4000,
+              wide: false,
+            },
+          );
         },
         error: (error) => {
           this.submitted = false;
