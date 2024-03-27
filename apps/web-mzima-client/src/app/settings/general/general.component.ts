@@ -151,7 +151,7 @@ export class GeneralComponent implements OnInit {
 
     return this.configService.update('site', siteConfig).pipe(
       mergeMap((updatedSite) => {
-        this.sessionService.setConfigurations('site', updatedSite);
+        this.sessionService.setConfigurations('site', (updatedSite as any).result);
         return this.configService.update('map', this.mapSettings.mapConfig);
       }),
     );
