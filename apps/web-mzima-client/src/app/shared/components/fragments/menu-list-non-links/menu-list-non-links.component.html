@@ -22,7 +22,7 @@
 
 <!-- Smaller screens -->
 <div class="menu__body" *ngIf="!isDesktop">
-  <div class="mobile-menu">
+  <nav class="mobile-menu" aria-label="mobileMenuLabel">
     <ng-container *ngFor="let item of menu">
       <hr *ngIf="item.separator" />
       <a
@@ -44,5 +44,5 @@
     <a class="mobile-menu-button" href="https://www.ushahidi.com/terms-of-service" target="_blank">
       {{ 'app.terms_and_conditions' | translate }}
     </a>
-  </div>
+  </nav>
 </div>
