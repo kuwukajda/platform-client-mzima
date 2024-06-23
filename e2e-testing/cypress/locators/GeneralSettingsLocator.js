@@ -16,13 +16,15 @@ const GeneralSettingsLocator = {
   denialMsg: '[data-qa="denied"]',
   contactEmail: '[data-qa="contact-email"]',
   emailField: '[data-qa="email"]',
+  deleteImageBtn: '[data-qa="btn-update-logo"]',
+  deploymentLogo: '[data-qa="deployment_logo"]',
   generateAPIKeyBtn: '[data-qa="generate-api-key"]',
   acceptGenerateAPIKeyBtn: '[data-qa="btn-confirm-delete"]',
   queryLocationField: '[data-qa="query-location"]',
   geocoderList: '[data-qa="geocoder-list"]',
   geocoderListItem: '[data-qa="geocoder-list-item"]',
   defaultLatitudeField: '[data-qa="default-latitude"]',
-  defaultLongitudeField: '[data-qa="default-longitude"]'
+  defaultLongitudeField: '[data-qa="default-longitude"]',
 };
 
 export default GeneralSettingsLocator;

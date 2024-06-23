@@ -33,7 +33,7 @@ describe("Automated Tests for General Settings", () => {
   it("Verify API field", () => {
     generalSettingsFunctions.open_general_settings_page();
     generalSettingsFunctions.verify_api_field_should_have_value();
-  });
+  })
 
   it("Tests Generating New API key", () => {
     generalSettingsFunctions.open_general_settings_page();
@@ -43,6 +43,11 @@ describe("Automated Tests for General Settings", () => {
   it("Tests General Settings Map", () => {
     generalSettingsFunctions.open_general_settings_page();
     generalSettingsFunctions.verify_the_map_coordinates();
+  });
+
+  it("Test Change Deployment Image", () => {
+    generalSettingsFunctions.open_general_settings_page();
+    generalSettingsFunctions.change_deployment_image();
   });
 
 });
