@@ -84,6 +84,8 @@
           [class.checked]="isPostInCollection(item)"
           (click)="goToCollection(item)"
           [data-qa]="'collection-item'"
+          tabindex="0"
+          (keydown.enter)="goToCollection(item)"
         >
           <app-collection-item
             [collection]="item"
