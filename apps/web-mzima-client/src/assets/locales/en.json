@@ -833,7 +833,9 @@
       "export": "Export",
       "put_under_review": "Put under review",
       "archive": "Archive",
-      "publish": "Publish"
+      "publish": "Publish",
+      "share": "Share",
+      "open": "Open actions menu"
     },
     "created_at": "<strong>Created</strong> at",
     "updated_at": "<strong>Last updated</strong> at",
